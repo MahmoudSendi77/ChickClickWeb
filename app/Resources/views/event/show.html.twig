@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Event</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ event.id }}</td>
+            </tr>
+            <tr>
+                <th>Eventtitle</th>
+                <td>{{ event.eventTitle }}</td>
+            </tr>
+            <tr>
+                <th>Eventpicture</th>
+                <td>{{ event.eventPicture }}</td>
+            </tr>
+            <tr>
+                <th>Eventdescription</th>
+                <td>{{ event.eventDescription }}</td>
+            </tr>
+            <tr>
+                <th>Eventadress</th>
+                <td>{{ event.eventAdress }}</td>
+            </tr>
+            <tr>
+                <th>Eventcountry</th>
+                <td>{{ event.eventCountry }}</td>
+            </tr>
+            <tr>
+                <th>Eventhoure</th>
+                <td>{{ event.eventHoure }}</td>
+            </tr>
+            <tr>
+                <th>Eventstartdate</th>
+                <td>{% if event.eventStartDate %}{{ event.eventStartDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Eventenddate</th>
+                <td>{% if event.eventEndDate %}{{ event.eventEndDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Eventcategory</th>
+                <td>{{ event.eventCategory }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('event_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

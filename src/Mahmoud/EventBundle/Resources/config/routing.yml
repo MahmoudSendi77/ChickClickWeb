@@ -1,0 +1,12 @@
+mahmoud_event_homepage:
+    path:     /
+    defaults: { _controller: MahmoudEventBundle:Default:index }
+
+home_event:
+    path:     /homeEvent
+    defaults: { _controller: MahmoudEventBundle:HomeEvent:homeEvent }
+
+show_event:
+    path:     /showEvent
+    defaults: { _controller: MahmoudEventBundle:HomeEvent:showEvent }
+
