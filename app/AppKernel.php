@@ -20,6 +20,9 @@ class AppKernel extends Kernel
             new Mahmoud\EventBundle\MahmoudEventBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new UserBundle\UserBundle(),
+            new ForumBundle\ForumBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
+            new EspritApiBundle\EspritApiBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -61,4 +64,5 @@ class AppKernel extends Kernel
         });
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
+
 }

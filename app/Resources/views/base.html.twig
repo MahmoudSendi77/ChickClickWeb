@@ -46,7 +46,16 @@
                                 <a class="nav-link js-scroll-trigger" href="#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                                <a class="nav-link js-scroll-trigger" href="{{ path('forum_rechercheC') }}">Forums</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="{{ path('my_sujet') }}">My Forums</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="{{ path('fos_user_security_login') }}">LOG IN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="{{ path('fos_user_registration_register') }}">REGISTER</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -719,5 +728,14 @@
         {% endblock %}
         {% block javascripts %}{% endblock %}
         {% endblock %}
+        {% block footer %}
+            <footer class=" py-5 bg-dark">
+                <div class="container">
+                    <div class="m-0 text-center text-white">Copyright &copy; Chick Click 2019</div>
+                    <div class="m-0 text-center text-white">Here you can always get your CLICK and be in the FLEEK</div>
+                </div>
+            </footer>
+        {% endblock %}
+
     </body>
 </html>

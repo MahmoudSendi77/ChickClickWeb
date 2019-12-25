@@ -2,7 +2,7 @@
 # https://symfony.com/doc/current/security.html
 security:
     encoders:
-        FOS\AppBundle\Model\UserInterface: bcrypt
+        FOS\UserBundle\Model\UserInterface: bcrypt
     role_hierarchy:
         ROLE_CLIENT:       ROLE_USER
         ROLE_AGENT:       ROLE_USER
@@ -13,7 +13,7 @@ security:
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        fos_appbundle:
+        fos_userbundle:
             id: fos_user.user_provider.username
 
 
@@ -26,7 +26,7 @@ security:
         main:
             pattern: ^
             form_login:
-                provider: fos_appbundle
+                provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
 
             # activate different ways to authenticate

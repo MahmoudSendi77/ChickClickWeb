@@ -20,10 +20,7 @@ class HomeEventController extends Controller
     {
 
         $rep=$this->getDoctrine()->getManager()->getRepository(Event::class)->findAll();
-//        $images = array();
-//        foreach ($rep as $key => $entity) {
-//            $images[$key] = base64_encode(stream_get_contents($entity->getEventPicture()));
-//        }
+
 
         return $this->render('@MahmoudEvent/HomeEvent/show_event.html.twig', array(
            'listEvent'=>$rep,

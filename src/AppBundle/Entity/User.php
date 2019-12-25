@@ -30,4 +30,17 @@ class User extends BaseUser
         parent::__construct();
         // your own logic
     }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\user", inversedBy="user")
+     */
+    private $sujet;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\user", inversedBy="user")
+     */
+    private $commentaireSu;
+
+
+
 }
